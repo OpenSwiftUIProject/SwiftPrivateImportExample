@@ -1,0 +1,16 @@
+
+/* SWIFT_PD_GUESS_PATCH_BEGIN */
+
+public package class ObjectCache<Key, Value> where Key : Swift.Hashable {
+  @inlinable public init(constructor: @escaping (Key) -> Value)
+  final public subscript(key: Key) -> Value {
+    get
+  }
+  @objc deinit
+}
+
+extension Color.Resolved {
+    private static let cache: ObjectCache<Color.Resolved, NSObject>
+}
+
+/* SWIFT_PD_GUESS_PATCH_END */
