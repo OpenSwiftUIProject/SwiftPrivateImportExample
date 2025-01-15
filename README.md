@@ -24,6 +24,10 @@ It will then store the information on a swiftmodule file.
 
 Since we lack of `SwiftUICore.swiftmodule/*-apple-macos.swiftmodule` file in SDK, I have not found a way to use it yet.
 
+> We can get such file in location like `/Applications/Xcode-16.1.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/15.1/SwiftUICore.swiftmodule`
+>
+> But it is not build with `-enable-private-imports` so some extra work is still needed. 
+
 ### Prepare
 
 1. Patch the private SDK
